@@ -66,8 +66,6 @@ python agent.py --try-tools
 
 ## What I saw
 
-<!-- To be filled in after running the tests. -->
-
 1. What's the weather in Piler in India, Andhra Pradesh State?
 
 What's the weather in Piler in India, Andhra Pradesh State?
