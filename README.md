@@ -67,3 +67,36 @@ python agent.py --try-tools
 ## What I saw
 
 <!-- To be filled in after running the tests. -->
+
+1. What's the weather in Piler in India, Andhra Pradesh State?
+
+What's the weather in Piler in India, Andhra Pradesh State?
+  -> get_weather({"city": "Piler"})
+  <- {"place": "Piler, Grisons, Switzerland", "now": {"temperature": "22 F (-6 C)", "sky": "Cloudy"}, ..
+Assistant: The weather service returned **Piler in Grisons, Switzerland**, not Piler in Andhra Pradesh, India. I can only look up a city by name, so I can't pick the Indian location. Here's the Swiss Piler:
+
+If you meant the Indian town, you could give me a nearby larger city and I can check that instead.
+
+2. What's the weather in New YORK? (WIFI OFF)
+
+You: What's the weather in New YORK
+Traceback (most recent call last):
+  File "C:\Users\Sunitha\OneDrive\Desktop\Muthyalu\Practice\agent-project\.venv\Lib\site-packages\httpx2\_transports\default.py", line 95, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Sunitha\OneDrive\Desktop\Muthyalu\Practice\agent-project\.venv\Lib\site-packages\httpx2\_transports\default.py", line 242, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+3. Remind me about my next trip in Summer 2027?
+
+Remind me about my next trip in Summer 2027
+  -> get_my_trips({})
+  <- {"today": "2026-11-24", "trips": [{"city": "Chicago", "leaves": "2026-11-26", "returns": "2026-11-28", "why": "Work conference"}, {"city": "Hyderabad", "leaves": "2026-11-30", "returns": "2026-12-14", "why": "Family visit"}]}
+Assistant: I checked your trips, and none are in summer 2027. Your upcoming trips are:
+
+- **Chicago** (work conference): Nov 26 to Nov 28, 2026
+- **Hyderabad** (family visit): Nov 30 to Dec 14, 2026
+
+Did you mean one of these? If so, tell me which one and what day you'd like the reminder. Or if you have a summer 2027 trip planned that isn't in your list, tell me the city and dates and I can set the reminder for a day you choose.
+
+
